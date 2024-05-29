@@ -31,13 +31,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
 	const	char *s1 = "abcD";
 	const	char *s2 = "abcd";
 	size_t	n = 3;
 
 	printf("%d", ft_strncmp(s1, s2, n));
-}
-*/
+}*/

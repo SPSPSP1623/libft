@@ -12,86 +12,82 @@
 
 #include "libft.h"
 
-int	ft_count_words(char const *s, char c)
+static size_t	ft_count_words(char const *s, char c)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
-	if (s[i] == c)
-		count = 0;
-	else
-		count = 1;
-	while (s[i] != '\0' && s[i] == c)
-		i++;
-	while (s[i] != '\0')
-	{
-		if (s[i] != c && s[i - 1] == c)
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-int	ft_word_len(char const *s, char c, int i)
-{
-	int	count;
-
 	count = 0;
-	while (s[i] != '\0' && s[i] != c)
+	while (s[i])
 	{
-		count++;
-		i++;
+		if (s[i] != c)
+		{
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+		else if (s[i] == c)
+			i++;
 	}
 	return (count);
 }
 
-char	**ft_free_split(char **split, int row)
+static size_t	ft_word_len(char const *s, char c)
 {
-	int	i;
+	size_t	len;
 
-	i = 0;
-	while (*split[i] != '\0' && i < row)
+	len = 0;
+	while (s[len] != '\0' && s[len] != c)
+		len++;
+	return (len);
+}
+
+static void	ft_free_split(char **split, size_t i)
+{
+	while (i > 0)
 	{
+		i--;
 		free(split[i]);
-		i++;
 	}
 	free(split);
-	return (NULL);
+}
+
+static char	**ft_split_aux(char **split, char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (i < ft_count_words(s, c))
+	{
+		while (s[j] && s[j] == c)
+			j++;
+		split[i] = ft_substr(s, j, ft_word_len(&s[j], c));
+		if (!split[i])
+		{
+			ft_free_split(split, i);
+			return (NULL);
+		}
+		while (s[j] != '\0' && s[j] != c)
+			j++;
+		i++;
+	}
+	split[i] = NULL;
+	return (split);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		row;
-	int		col;
 	char	**split;
 
 	if (!s)
 		return (NULL);
-	split = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	split = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!split)
 		return (NULL);
-	i = 0;
-	row = 0;
-	while (row < ft_count_words(s, c) && c != '\0')
-	{
-		col = 0;
-		split[row] = malloc(ft_word_len(s, c, i) + 1);
-		if (!split[row])
-			return (ft_free_split(split, i));
-		while (s[i] != '\0' && s[i] == c)
-			i++;
-		while (s[i] != '\0' && s[i] != c)
-		{
-			split[row][col] = s[i];
-			col++;
-			i++;
-		}
-		split[row][col] = '\0';
-		row++;
-	}
-	split[row] = 0;
+	split = ft_split_aux(split, s, c);
 	return (split);
 }
 

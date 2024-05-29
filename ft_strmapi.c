@@ -31,3 +31,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
+
+/*char f(unsigned int i, char s)
+{
+	printf("i = %d = %c\n", i, s);
+	return (s - '0');
+}
+
+int main(void)
+{
+	char	*s = "zudtqc";
+	char	*result = ft_strmapi(s, f);
+}*/

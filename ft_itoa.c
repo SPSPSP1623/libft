@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_count(int n)
+static int	ft_count(int n)
 {
 	int		count;
 	long	nb;
@@ -36,7 +36,7 @@ int	ft_count(int n)
 	return (count);
 }
 
-char	*ft_positive(char *ptr, int n, int count)
+static char	*ft_positive(char *ptr, int n, int count)
 {
 	int	i;
 
@@ -50,7 +50,7 @@ char	*ft_positive(char *ptr, int n, int count)
 	return (ptr);
 }
 
-char	*ft_negative(char *ptr, int n, int count)
+static char	*ft_negative(char *ptr, int n, int count)
 {
 	int		i;
 	long	nb;
@@ -89,5 +89,5 @@ char	*ft_itoa(int n)
 
 /*int	main(void)
 {
-	printf("%s", ft_itoa(INT_MIN));
+	printf("%s", ft_itoa(-2147483647));
 }*/

@@ -40,11 +40,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
-	const char	*big = "je suis simon";
-	const char	*little = "suis";
-	printf("%s", ft_strnstr(big, little, sizeof(big)));
-}
-*/
+	const char	*big = "test ecole 42";
+	const char	*little = " 4";
+	printf("%s", ft_strnstr(big, little, 13));
+}*/

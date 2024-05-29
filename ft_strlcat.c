@@ -33,3 +33,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[d_len + i] = '\0';
 	return (d_len + s_len);
 }
+
+/*int	main(void)
+{
+	char	*src = "1234567";
+	char	*dest = "1234567";
+
+	printf("%zu\n", ft_strlcat(dest, src, 6));
+}*/

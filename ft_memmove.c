@@ -38,3 +38,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*int	main(void)
+{
+	char	s[15] = "abcdefghijklmno";
+
+	printf("%s\n", s);
+	ft_memmove(s + 5, s + 7, 7);
+	printf("%s\n", s);
+}*/

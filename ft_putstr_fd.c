@@ -23,3 +23,8 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
+
+/*int	main(void)
+{
+	ft_putstr_fd("ecole 42 ecole \n \t42", 1);
+}*/

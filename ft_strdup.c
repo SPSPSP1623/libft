@@ -32,10 +32,8 @@ char	*ft_strdup(const char *s)
 	return (dup);
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
-	char	*s = "simon";
-	ft_strdup(s);
-}
-*/
+	char	*s = "test strdup\n";
+	printf("%s", ft_strdup(s));
+}*/

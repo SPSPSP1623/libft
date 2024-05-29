@@ -30,3 +30,15 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (len);
 }
+
+/*int	main(void)
+{
+	char	src[] = "bateau";
+	char	dest[] = "avion";
+
+	printf("src  avant : %s\n", src);
+	printf("dest avant : %s\n", dest);
+	ft_strlcpy(dest, src, 6);
+	printf("src  apres : %s\n", src);
+	printf("dest apres : %s\n", dest);
+}*/

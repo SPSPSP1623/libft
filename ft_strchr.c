@@ -31,3 +31,10 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+/*int	main(void)
+{
+	char	s[13] = "je suis simon";
+
+	printf("%s", ft_strchr(s, 'i'));
+}*/

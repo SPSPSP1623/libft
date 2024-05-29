@@ -39,5 +39,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 /*int	main(void)
 {
-	printf("%s\n", ft_substr("tripouille", 1, 1));
+	printf("%s\n", ft_substr("tripouille", 0, 5));
 }*/

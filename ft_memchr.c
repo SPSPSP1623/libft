@@ -27,3 +27,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*int	main(void)
+{
+	char	s[13] = "je suis simon";
+
+	printf("%s", ft_memchr(s, 'm', 11));
+}*/

@@ -17,3 +17,27 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
+
+/*int	main(void)
+{
+
+	t_list *head = NULL;
+
+    char *s = "a";
+    char *s1 = "b";
+
+    t_list *node1 = ft_lstnew(s);
+    t_list *node2 = ft_lstnew(s1);
+
+	ft_lstadd_front(&head, node1);
+	ft_lstadd_front(&head, node2);
+
+    while (head != NULL)
+	{
+        printf("%s\n", (char *)head->content);
+        head = head->next;
+    }
+	free(head);
+	free(node1);
+	free(node2);
+}*/

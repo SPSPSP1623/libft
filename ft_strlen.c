@@ -23,3 +23,8 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+
+/*int	main(void)
+{
+	printf("%zu", ft_strlen("12345"));
+}*/

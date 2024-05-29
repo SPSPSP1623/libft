@@ -36,3 +36,55 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (start);
 }
+
+/*void	*f(void *content)
+{
+	int	*new_c = malloc(sizeof(int));
+	if (new_c == NULL)
+		return (NULL);
+	*new_c = *(int *)content;
+	return (new_c);
+}
+
+void	del(void *content)
+{
+	free(content);
+}
+
+void	ft_print(t_list *lst)
+{
+	while (lst)
+	{
+		printf("%d\n", *(int *)(lst->content));
+		lst = lst->next;
+	}
+}
+
+int	main(void)
+{
+	int	i;
+	t_list	*lst = NULL;
+	t_list	*new_lst;
+	int		arr[] = {1, 2, 3, 4, 5};
+
+	i = 0;
+	while (i < 5)
+	{
+		t_list	*node = ft_lstnew(&arr[i]);
+		if (!node)
+		{
+			ft_lstclear(&lst, del);
+			return (1);
+		}
+		ft_lstadd_back(&lst, node);
+		i++;
+	}
+
+	printf("og lst: \n");
+	ft_print(lst);
+
+	new_lst = ft_lstmap(lst, f, del);
+
+	printf("new lst: \n");
+	ft_print(new_lst);
+}*/

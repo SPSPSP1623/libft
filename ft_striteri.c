@@ -23,3 +23,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+/*void f(unsigned int i, char *str)
+{
+	printf("i = %d s = %s\n", i, str);
+}
+int	main()
+{
+	char str[10] = "Hello.";
+	ft_striteri(str, f);
+}*/

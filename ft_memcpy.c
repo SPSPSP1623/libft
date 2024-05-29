@@ -33,11 +33,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (ptr_dest);
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
 	char	*dest = "simon";
 	char	*src = "SIMON";
 	printf("%d", printf(dest, src, 4));
-}
-*/
+}*/

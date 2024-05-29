@@ -39,10 +39,8 @@ int	ft_atoi(const char *nptr)
 	return (nbr);
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
-	char	*nptr = "+-123";
+	char	*nptr = "44545";
 	printf("%d", ft_atoi(nptr));
-}
-*/
+}*/

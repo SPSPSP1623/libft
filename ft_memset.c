@@ -25,10 +25,10 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*
-int	main(void)
+/*int	main(void)
 {
-	char	s[15] = "je suis simon !";
-	printf("%s", ft_memset(s + 5, '.', 8));
-}
-*/
+	char	s[13] = "je suis simon";
+
+	ft_memset(s + 1, '.', 10);
+	printf("%s", s);
+}*/
