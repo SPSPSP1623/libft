@@ -6,13 +6,13 @@
 /*   By: speladea <speladea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/21 13:06:39 by speladea          #+#    #+#             */
-/*   Updated: 2025/02/21 13:07:18 by speladea         ###   ########.fr       */
+/*   Updated: 2025/02/21 14:07:01 by speladea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <../includes/libft.h>
 
-void    write_str(char *str, int fd)
+void	write_str(char *str, int fd)
 {
-    write(fd, str, ft_strlen(str));
+	write(fd, str, ft_strlen(str));
 }
