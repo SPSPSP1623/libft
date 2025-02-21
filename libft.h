@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: speladea <speladea@student.42.fr>          #+#  +:+       +#+        */
+/*   By: speladea <speladea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-05-16 10:49:58 by speladea          #+#    #+#             */
-/*   Updated: 2024-05-16 10:49:58 by speladea         ###   ########.fr       */
+/*   Created: 2024/05/16 10:49:58 by speladea          #+#    #+#             */
+/*   Updated: 2025/02/21 13:07:36 by speladea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 // LIB
 int		ft_isalpha(int c);
@@ -68,5 +69,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 int		ft_lstsize(t_list *lst);
-
+// ADDED
+bool	only_digit_in_str(char *str);
+void    write_str(char *str, int fd);
 #endif
